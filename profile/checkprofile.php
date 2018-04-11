@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title>Register</title>
-	<link rel="stylesheet" type="text/css" href="check.css">
+	<link rel="stylesheet" type="text/css" href="../check.css">
   <meta charset="utf-8">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -84,12 +84,12 @@
     
 <div>
     <div class="logo" style="font-family:'Oswald',sans-serif;color:white;font-size:150%;">
-        <img src="images/logo.gif" style="height:130px;">
+        <img src="../images/logo.gif" style="height:130px;">
         <br/>Indian Institute of Information Technology Kalyani</div>
 <div id="container">
  
     <form action="<?php echo $_SERVER['PHP_SELF']?>" method="POST"> 
-    <label for="fname">CHECK IN DATE</label>
+    <label for="fname">CHECK IN</label>
     <input type="date" id="idate" name="date" placeholder="xxx">
 
     <input type="submit"  id="isubmit" name="submit" value="Submit">
@@ -113,7 +113,7 @@ if (mysqli_num_rows($result) == 10){
 }
 else{
   echo '<script type="text/javascript">
-  location.replace("book.php");
+  location.replace("bookacc.php");
   </script>';
 }
 }

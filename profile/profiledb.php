@@ -56,7 +56,7 @@ if(!empty($reg) && !empty($relation)&& !empty($year)){
 if(!empty($purpose)&&!empty($affiliated)){
   $group='Other';
   $dbc= mysqli_connect('localhost','root','','guesthouse');
-  $query="INSERT into other (name,email,phone,purpose,affiliated) values('$name','$email','$phone','$purpose','$affiliated')";
+  $query="INSERT into other (name,email,phone,purpose,affiliatedto) values('$name','$email','$phone','$purpose','$affiliated')";
   $result=mysqli_query($dbc,$query);
   echo 'Sucessful';
   mysqli_close($dbc);

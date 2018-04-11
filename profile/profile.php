@@ -70,7 +70,7 @@
         <a class="nav-link" href="#">Edit Profile<span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="../checkroom.php">Book a Room</a>
+        <a class="nav-link" href="checkprofile.php">Book a Room</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="logout.php">LogOut</a>
@@ -103,9 +103,9 @@ $query="SELECT * FROM userdata where username='$username'";
        echo '</div></div>';
        echo '<div class="col-md-6">';
        echo '<div class="details">';
-       echo '<h1>'.$row['username'].'</h1>';
-       echo '<p>'.$row['email'].'</p>';
-       echo '<p>'.$row['phone'].'</p>';
+       echo '<i class="far fa-user-circle"></i>:<h1>'.$row['username'].'</h1>';
+       echo '<i class="far fa-envelope-open"></i>:<p>'.$row['email'].'</p>';
+       echo '<i class="fas fa-phone-volume"></i>:<p>'.$row['phone'].'</p>';
        echo '</div></div></div>';
        echo '</div></div></div>';
 
@@ -113,7 +113,21 @@ $query="SELECT * FROM userdata where username='$username'";
        
     }
     else{
-       echo  '<img src="profilepic/default.png" style="height:50px;width:50px;border-radius:50%;"/>';
+      echo '<div class="profile">
+      <div class="container"><div class="container comb">
+      <div class="row">
+      <div class="col-md-6">
+      <div class="img">';
+      echo  '<img src="profilepic/default.png" style="height:200px;width:200px;border-radius:20px;"/>';
+echo '</div></div>';
+echo '<div class="col-md-6">';
+echo '<div class="details">';
+echo '<i class="far fa-user-circle"></i>:<h1>'.$row['username'].'</h1>';
+echo '<i class="far fa-envelope-open"></i>:<p>'.$row['email'].'</p>';
+echo '<i class="fas fa-phone-volume"></i>:<p>'.$row['phone'].'</p>';
+echo '</div></div></div>';
+echo '</div></div></div>';
+       
     }
 
     $email=$row['email'];

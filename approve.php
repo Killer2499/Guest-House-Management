@@ -9,10 +9,21 @@ integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6J
 integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" 
 integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 <title>Approve Booking</title>
 <style>
 body{
     background:#eee;overflow-x:hidden;
+}
+.done{
+    text-align:center;
+    position:absolute;
+    top:100px;
+    left:32%;
+}
+.text{
+    font-family:'Raleway',sans-serif;
+    font-size:200%;
 }
 .approve{
 border:1px solid black;background:white;
@@ -62,11 +73,18 @@ else{
 }
 if(isset($_POST['confirm'])){
     if($_POST['confirm']=='Approve Booking'){
+        $room=$_POST['room'];
         $dbc=mysqli_connect('localhost','root','','guesthouse');
         $query="UPDATE admindata set approved=1 where email='$email'  ";
         mysqli_query($dbc,$query);
+        $query="UPDATE admindata set Room='$room' where email='$email'  ";
+        mysqli_query($dbc,$query);
         mysqli_close($dbc);
-        echo 'Sucessfully Approved';
+        echo '<div class="done">';
+        echo '<p><img src="images/done.png" style="height:300px;width:300px;" class="img-fluid"></p>';
+        echo '<p class="text">Booking is sucessfuly approved!</p>';
+        echo '<p ><a style="background:orange;padding:10px;border-radius:10px;color:white;"href="admin/adminpanel.php">Back to Admin Panel</a></p>';
+        echo '</div>';
     }
     else{
         echo 'Not Approved';
@@ -84,6 +102,7 @@ isset($group)&&isset($booking_date)){
     echo 'Phone:'.$phone.'</br>';
     echo 'Group:'.$group.'</br>';
     echo 'Booking Date:'.$booking_date.'</br>';
+    echo 'Allot Room:<input type="text" name="room"/>';
     echo '<input type="submit" name="confirm" value="Approve Booking" id="yes"/>';
     echo '<input type="submit" name="confirm" value="Cancel Booking" id="no"/>';
     
@@ -95,7 +114,6 @@ isset($group)&&isset($booking_date)){
     echo '</form>';
     echo '</div></div>';
 }
-echo '<div class="row" style="text-align:center;padding-top:20px;"><a href="admin/adminpanel.php" id="admin">Back to Admin Panel</a></div>';
 ?>
 </body>
 </html>

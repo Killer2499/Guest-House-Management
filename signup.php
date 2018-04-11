@@ -79,29 +79,34 @@
 
       <p>
       <label for="name"><i class="far  fa-user" style=""></i></label>
-      <input type="text" name="username" value="" required autofocus placeholder="Enter your name" size="30" ></input><br/>
+      <input type="text" name="username" value="" required autofocus 
+      style="border-radius:5px;" placeholder="Enter your name" size="30" ></input><br/>
     </p>
 
       <p>
       <label for="name"><i class="fas fa-at"></i></label>
-      <input type="text" name="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+      <input type="text" name="email" required
+      style="border-radius:5px;"  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
         placeholder="Enter your email address" size="30" value=""></input><br/>
       </p>
 
 
     <p>
       <label for="password"><i class="fas  fa-key"></i></label>
-      <input type="password" name="pass" required placeholder="Enter Password" size="30"></input><br/>
+      <input type="password" name="pass" required 
+      style="border-radius:5px;" placeholder="Enter Password" size="30"></input><br/>
     </p>
 
         <p>
       <label for="cnfpassword"><i class="fas  fa-key"></i></label>
-      <input type="password" name="cnfpass" required placeholder="Enter Password"size="30"></input>
+      <input type="password" name="cnfpass" required
+      style="border-radius:5px;" placeholder="Enter Password"size="30"></input>
     </p>
 
     <p>
    <label for="name"><i class="fas fa-phone"></i></i></label>
-  <input type="tel" name="phone" required maxlength="10" placeholder="Enter your mobile number" size="30"
+  <input type="tel" name="phone" required maxlength="10"
+  style="border-radius:5px;" placeholder="Enter your mobile number" size="30"
   value=""></input><br/>
    </p>
      <p>
@@ -136,8 +141,8 @@ if(isset($_POST['register'])){
   
     if(!empty($username)&&!empty($email)&&!empty($password)&&!empty($phone)){
   
-    $dbc=mysqli_connect('127.0.0.1','root','','login');//Connect to server,Change ur details to connect,login is ur database name
-    $query="INSERT INTO userdata VALUES('$username','$email','$password','$phone')";//Insert values into table,userdata is table name
+    $dbc=mysqli_connect('localhost','root','','login');//Connect to server,Change ur details to connect,login is ur database name
+    $query="INSERT INTO userdata (username,email,userpassword,phone) VALUES('$username','$email','$password','$phone')";//Insert values into table,userdata is table name
     $result=mysqli_query($dbc,$query)
             or die('Error querying database');//Query
     mysqli_close($dbc);
