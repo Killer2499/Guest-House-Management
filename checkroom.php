@@ -108,7 +108,7 @@ $newdate = date("Y-m-d", strtotime($date));
 $query="SELECT * FROM admindata where booking_date='$newdate' and approved=1";
 $result=mysqli_query($dbc,$query);
 $row=mysqli_num_rows($result);
-if (mysqli_num_rows($result) == 10){
+if (mysqli_num_rows($result) == 6){
     echo '<script>alert("Rooms Booked")</script>';
 }
 else{

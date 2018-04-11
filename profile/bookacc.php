@@ -55,7 +55,7 @@ font-family:'Oswald',sans-serif;padding:10px;">
         <label for="reference"><i class="fas fa-id-badge" style="font-size:140%;"></i></label>
       <p> <input type="text" name="reference" required 
       style="border-radius:5px;" placeholder="Enter your reference number" size="35"></input></p>
-       <input type="submit" name="submit" value="Book" id="btn"></input>
+       <input type="submit" name="submit1" value="Book" id="btn"></input>
       </form>
       <div>
       <h1 style="font-family: 'Raleway', sans-serif;">Cost Per room:</h1></div>
@@ -74,7 +74,7 @@ font-family:'Oswald',sans-serif;padding:10px;">
        <label for="relation"><i class="fas fa-link"></i></label>
        <p><input type="text" name="relation" required
        style="border-radius:5px;" placeholder="Enter your relation with the student" size="35"></input><p>
-       <input type="submit" name="submit" value="Book" id="btn"></input>
+       <input type="submit" name="submit2" value="Book" id="btn"></input>
       </form>
       <div>
       <h1 style="font-family: 'Raleway', sans-serif;">Cost Per room:</h1></div>
@@ -87,7 +87,7 @@ font-family:'Oswald',sans-serif;padding:10px;">
        <label for="affiliated"><i class="fab fa-affiliatetheme"></i></label>
        <p><input type="text" name="affiliated" required
        style="border-radius:5px;" placeholder="Enter the college/company you are affiliated to" size="45"></input></p>
-       <input type="submit" name="submit" value="Book" id="btn"></input>
+       <input type="submit" name="submit3" value="Book" id="btn"></input>
       </form>
       <div>
       <h1 style="font-family: 'Raleway', sans-serif;">Cost Per room:</h1></div>

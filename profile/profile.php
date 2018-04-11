@@ -103,9 +103,9 @@ $query="SELECT * FROM userdata where username='$username'";
        echo '</div></div>';
        echo '<div class="col-md-6">';
        echo '<div class="details">';
-       echo '<i class="far fa-user-circle"></i>:<h1>'.$row['username'].'</h1>';
-       echo '<i class="far fa-envelope-open"></i>:<p>'.$row['email'].'</p>';
-       echo '<i class="fas fa-phone-volume"></i>:<p>'.$row['phone'].'</p>';
+       echo '<h1><i class="far fa-user-circle"></i>:'.$row['username'].'</h1>';
+       echo '<h3><i class="far fa-envelope-open"></i>:'.$row['email'].'</h3>';
+       echo '<h3><i class="fas fa-phone-volume"></i>:'.$row['phone'].'</h3>';
        echo '</div></div></div>';
        echo '</div></div></div>';
 

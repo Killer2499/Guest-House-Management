@@ -42,11 +42,23 @@ a:visited{
   font-family: 'Oswald', sans-serif;  
 }
 tr:hover {background-color: #f5f5f5;}th {background-color: #4CAF50;color: white;}
+.header a{
+  color:black;
+}
+.header a:hover{
+  color:green;
+}
+.yes a:hover{
+  color:green;
+}
+
 </style>
 </head>
 <body>
 <div class="header">
-<h1 style="font-size:200%;">Admin Panel</h1>
+<a href="../index.php" style="padding-right:10px;" class="h">Home</a>
+<span style="font-size:200%;color:red;">Admin Panel</span>
+<a href="../profile/logout.php" style="padding-left:10px;" class="h">Logout</a>
 </div>
 <div class="sortby">
 <nav class="navbar navbar-expand-lg navbar-light bg-dark" style="padding-left:40px;padding-right:40px;">
@@ -72,11 +84,14 @@ tr:hover {background-color: #f5f5f5;}th {background-color: #4CAF50;color: white;
       <li class="nav-item active">
         <a class="nav-link" href="other.php" name="sort" value="group" style="color:white">Other</a>
       </li>
+     
     </ul>
     <form class="form-inline my-2 my-lg-0" method="POST" action="search.php">
       <input class="form-control mr-sm-2" type="search" name="search" placeholder="Search">
       <button class="btn btn-outline-success my-2 my-sm-0" type="submit" name='submit'>Search</button>
+      
     </form>
+ 
   </div>
 </nav>
 </div>

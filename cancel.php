@@ -40,6 +40,12 @@ padding-left:200px;padding-right:200px;}
     padding:10px;
     margin:0px auto;
 }
+.done{
+    text-align:center;
+    position:absolute;
+    top:100px;
+    left:40%;
+}
 </style>
 </head>
 <body>
@@ -80,7 +86,11 @@ if(isset($_POST['confirm'])){
         mysqli_query($dbc,$query2);
         mysqli_query($dbc,$query3);
         mysqli_close($dbc);
-        echo 'Sucessfully Removed';
+        echo '<div class="done">';
+        echo '<p><img src="images/delete.png" style="height:300px;width:300px;" class="img-fluid"></p>';
+        echo '<p class="text">Booking is sucessfuly Removed!</p>';
+        echo '<p ><a style="background:orange;padding:10px;border-radius:10px;color:white;"href="admin/adminpanel.php">Back to Admin Panel</a></p>';
+        echo '</div>';
     }
     else{
         echo 'Not Removed';
@@ -109,8 +119,6 @@ isset($group)&&isset($booking_date)){
     echo '<input type="hidden" name="booking_date" value="'.$booking_date.'"/>';
     echo '</form>';
     echo '</div></div>';
-}
-echo '<div class="row" style="text-align:center;padding-top:20px;"><a href="admin/adminpanel.php" id="admin">Back to Admin Panel</a></div>';
-?>
+}?>
 </body>
 </html>

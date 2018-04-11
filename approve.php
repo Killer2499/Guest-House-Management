@@ -85,6 +85,7 @@ if(isset($_POST['confirm'])){
         echo '<p class="text">Booking is sucessfuly approved!</p>';
         echo '<p ><a style="background:orange;padding:10px;border-radius:10px;color:white;"href="admin/adminpanel.php">Back to Admin Panel</a></p>';
         echo '</div>';
+        
     }
     else{
         echo 'Not Approved';

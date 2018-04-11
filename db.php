@@ -73,14 +73,14 @@ mysqli_close($dbc);
 
 $to='sanathsingavarapu99@gmail.com';
 $subject='Guest house Booking';
-$msg='I am' .$name.'and I want to book a room.I work as guest faculty for the college.
+$msg='I am ' .$name.' and I want to book a room.I work as guest faculty for the college.
       Hope!!This' .$reference.'reference number could be useful.I will be available on'.$phone."\n". 'Thanking you!!' ;
 mail($to,$subject,$msg,'From:'.$email);
 
 
 }
 else if(!empty($name)&&!empty($email)&&!empty($phone)&&!empty($namestudent)&&!empty($reg)&&!empty($year)&&!empty($relation)){
-  $group='Student Relative';
+  $group='Student Related';
 $dbc=mysqli_connect('localhost','root','','guesthouse');
 
 $query="INSERT INTO studentrelated VALUES('$name','$email','$phone','$namestudent','$reg','$year','$relation')";
@@ -104,7 +104,7 @@ mysqli_close($dbc);
 
 $to='sanathsingavarapu99@gmail.com';
 $subject='Guest house Booking';
-$msg='I am'  .$name. 'and I want to book a room.I am' .$relation. 'of' .$namestudent. 'studying' .$year. 'year
+$msg='I am '  .$name. ' and I want to book a room.I am' .$relation. 'of' .$namestudent. 'studying' .$year. 'year
       Hope!!This' .$reg. 'Registration number could be useful.I will be available on' .$phone."\n".'Thanking you!!' ;
 mail($to,$subject,$msg,'From:'.$email);
 
@@ -136,7 +136,7 @@ else if(!empty($name)&&!empty($email)&&!empty($phone)&&!empty($purpose)&&!empty(
 
   $to='sanathsingavarapu99@gmail.com';
   $subject='Guest house Booking';
-  $msg='I am' .$name. 'and I want to book a room and my purpose to visit is'.$purpose.'I am from'.$affiliated.
+  $msg='I am ' .$name. ' and I want to book a room and my purpose to visit is'.$purpose.'I am from'.$affiliated.
         'I will be available on'.$phone."\n".'Thanking you!!' ;
   mail($to,$subject,$msg,'From:'.$email);
 

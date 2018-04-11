@@ -2,8 +2,7 @@
 
 This project is completely developed in PHP and SQL.
 
-To Acess this Project:</br>
-
+Acess this Project:</br>
 1.Clone or Download  the Project. </br>                                
 2.Install wampp/xampp/Apache since PHP requires live server to work on browser.</br>
 3.Copy the folder and paste into xampp/htdocs/FolderName.</br>
