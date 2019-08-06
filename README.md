@@ -1,4 +1,4 @@
-# Guest-House-Management
+# Guest House Management
 
 This project is completely developed in PHP and SQL.
 
