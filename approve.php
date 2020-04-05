@@ -74,6 +74,33 @@ else{
 if(isset($_POST['confirm'])){
     if($_POST['confirm']=='Approve Booking'){
         $room=$_POST['room'];
+        
+        require_once "Mail.php";
+
+          $from = "uddeshya1812@gmail.com";
+          $to = $email;
+
+          $host = "ssl://smtp.gmail.com";
+          $port = "465";
+          $username = 'uddeshya1812@gmail.com';
+          $password = 'change$the$mail$id$and$enter$your$password';
+
+          $subject = "Room Booked!";
+    
+          $var = 'Your Booking room number is ';
+          $body = "This is a auto-generated mail.A room has been booked for ".$name." at Room no.".$room." IIIT Kalyani Guest House Management Team " ;
+          
+          $headers = array ('From' => $from, 'To' => $to,'Subject' => $subject);
+          $smtp = Mail::factory('smtp',
+             array ('host' => $host,
+               'port' => $port,
+               'auth' => true,
+               'username' => $username,
+               'password' => $password));
+
+          $mail = $smtp->send($to, $headers, $body);
+
+        
         $dbc=mysqli_connect('localhost','root','','guesthouse');
         $query="UPDATE admindata set approved=1 where email='$email'  ";
         mysqli_query($dbc,$query);

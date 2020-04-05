@@ -71,10 +71,10 @@
  <div class="header">
     <ul class="nav">
     <li class="nav-item">
-      <button class="head"><a class="nav-link" href="#" style="color:white;">Home</a></button>
+      <button class="head"><a class="nav-link" href="index.php" style="color:white;">Home</a></button>
     </li>
     <li class="nav-item">
-      <button class="head"><a class="nav-link" href="check.php" style="color:white;">Guest</a></button>
+      <button class="head"><a class="nav-link" href="checkroom.php" style="color:white;">Guest</a></button>
     </li>
     <li class="nav-item">
       <button class="head"><a class="nav-link" href="admin/adminpanel.php" style="color:white;">Admin Panel</a></button>
@@ -85,14 +85,15 @@
 <div>
     <div class="logo" style="font-family:'Oswald',sans-serif;color:white;font-size:150%;">
         <img src="images/logo.gif" style="height:130px;">
-        <br/>Indian Institute of Information Technology Kalyani</div>
+        <br/>Indian Institute of Information Technology 
+		<br/>Kalyani</div>
 <div id="container">
  
     <form action="<?php echo $_SERVER['PHP_SELF']?>" method="POST"> 
     <label for="fname">CHECK IN DATE</label>
     <input type="date" id="idate" name="date" placeholder="xxx">
 
-    <input type="submit"  id="isubmit" name="submit" value="Submit">
+    <input type="submit"  id="isubmit" name="submit" value="Submit" >
 
 
   </form></div>

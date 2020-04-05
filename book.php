@@ -26,6 +26,9 @@ integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pG
     }
   </style>
  <title>guesthouse</title>
+ <li class="nav-item">
+ <button class="head"><a class="nav-link"href="index.php"  style="" >Home</a>
+  </li>
  </head>
 <body>
 <div class="main">
@@ -35,9 +38,8 @@ integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pG
 <center>
 <div class="header" style="padding-bottom:0px;">
 <h1 style="font-family: 'Raleway', sans-serif;padding:20px; color:white; font-weight:bold;">Guest House Booking </h1>
-<ul class="nav nav-pills mb-3 justify-content-center" id="pills-tab" role="tablist" style="background:orange;
-font-family:'Oswald',sans-serif;padding:10px;">
-  <li class="nav-item">
+<ul class="nav nav-pills mb-3 justify-content-center" id="pills-tab" role="tablist" style=" font-family:'Oswald',sans-serif;padding:10px;">
+ <li class="nav-item">
     <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab"
     style="color:white;" aria-controls="pills-home" aria-selected="true">Faculty</a>
   </li>
@@ -77,7 +79,7 @@ font-family:'Oswald',sans-serif;padding:10px;">
        <input type="submit" name="submit" value="Book" id="btn" style="width:300px; margin-left:30px;"></input></p>
       </form>
       <div>
-      <h1 style="font-family: 'Raleway', sans-serif;">Cost Per room:</h1></div>
+      <h1 style="font-family: 'Raleway', sans-serif;">Cost Per room: $4000</h1></div>
   </div>
   <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
   <form method="POST" action="db.php"  style="font-size:130%;font-family:'Oswald',sans-serif;padding:30px; padding-top:0px;padding-bottom:0px;">

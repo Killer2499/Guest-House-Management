@@ -36,7 +36,7 @@
     }
     #btn{
       border-radius:7px;
-      width:300px;
+      width:200px;
       background:#FDFEFE;
       border-bottom:5px solid #0462B6;
       color:#0462B6;
@@ -85,7 +85,8 @@
   </div>
   <div class="logo" style="font-family:'Oswald',sans-serif;color:white;font-size:150%;">
   <img src="images/logo.gif" style="height:130px;">
-  <br/>Indian Institute of Information Technology Kalyani</div>
+  <br/>Indian Institute of Information Technology 
+  <br/>Kalyani</div>
        
   <div class="loginform">
       <form action="<?php echo $_SERVER['PHP_SELF']?>" method="POST">
@@ -97,7 +98,7 @@
       <label style="color:white;font-size:120%;"><i class="fas  fa-key"></i></label>
       <input type="password" name="password" required placeholder="Password" style="border-radius:7px;"></input>
     </p>
-    <input type="submit" value="Login" name="submit" id="btn"  style=""></input>
+    <input type="submit" value="Login" name="submit" id="btn" align="right" style=""></input>
     </form>
     <div class="pop" style="font-size:60%;color:white;padding-top:5px;">
     <a href="signup.php" style="color:;" class="sign">Don't have an account? Then Sign Up</a>
@@ -142,10 +143,10 @@ $dbc=mysqli_connect('127.0.0.1','root','','login')
 $query="SELECT * FROM userdata where username='$username' and userpassword='$password'";
 
 $result=mysqli_query($dbc,$query)
-        or die("Unable to query".mysqli_error());
+        or die("Unable to query".mysqli_error($dbc));
 
 $row=mysqli_fetch_array($result);//get the data from the database in an array
-mysqli_close($dbc);
+
 
 if($row['username']==$username && $row['userpassword']==$password){
   $_SESSION['username']=$username;
@@ -162,6 +163,7 @@ else{
   echo '</script>';
 
 }
+mysqli_close($dbc);
 }
 
 ?>
