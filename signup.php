@@ -47,7 +47,7 @@
     }
     #btn{
       border-radius:7px;
-      width:300px;
+      width:200px;
       background:#FDFEFE;
       border-bottom:5px solid #0462B6;
       color:#0462B6;
@@ -58,7 +58,7 @@
     <div class="header">
   <ul class="nav">
   <li class="nav-item">
-    <button class="head"><a class="nav-link" href="#" style="color:white;">Home</a></button>
+    <button class="head"><a class="nav-link" href="index.php" style="color:white;">Home</a></button>
   </li>
   <li class="nav-item">
     <button class="head"><a class="nav-link" href="index.php" style="color:white;">Log In</a></button>
@@ -73,7 +73,8 @@
   </div>
   <div class="logo" style="font-family:'Oswald',sans-serif;color:white;font-size:150%;">
   <img src="images/logo.gif" style="height:130px;">
-  <br/>Indian Institute of Information Technology Kalyani</div>
+  <br/>Indian Institute of Information Technology 
+  <br/>Kalyani</div>
     <div class="signup" style="color:white;">
 <form method="POST" action="<?php echo $_SERVER['PHP_SELF']?>">
 

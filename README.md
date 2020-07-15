@@ -9,6 +9,4 @@ Acess this Project:</br>
 4.Start the local server using wampp/xampp/Apache.</br>
 5.Open localhost/phpmyadmin and run the sql files to create database.</br>
 6.After sucessful creation of the databases,Now open the project using localhost/FolderName.</br>
-
-
-
+7.Move to approve.php to make some changes in mail ids to enable mailing system.</br>

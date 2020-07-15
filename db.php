@@ -52,7 +52,7 @@ if(!empty($name) && !empty($email)&& !empty($phone)&& !empty($reference)){
 $group='Faculty';
 $dbc=mysqli_connect('localhost','root','','guesthouse');
 
-$query="INSERT INTO faculty VALUES('$name','$email','$phone','$reference')";
+$query=$pdo->prepare("INSERT INTO faculty VALUES('$name','$email','$phone','$reference')");
 $result=mysqli_query($dbc,$query);
 echo '<div class="success">';
 echo '<div class="row"><div class="col-md-12" style="text-align:center;">';
@@ -71,7 +71,7 @@ echo '<div class="row">
 echo '</div>';
 mysqli_close($dbc);
 
-$to='sanathsingavarapu99@gmail.com';
+$to='uddeshya1812@gmail.com';
 $subject='Guest house Booking';
 $msg='I am ' .$name.' and I want to book a room.I work as guest faculty for the college.
       Hope!!This' .$reference.'reference number could be useful.I will be available on'.$phone."\n". 'Thanking you!!' ;
@@ -83,7 +83,7 @@ else if(!empty($name)&&!empty($email)&&!empty($phone)&&!empty($namestudent)&&!em
   $group='Student Related';
 $dbc=mysqli_connect('localhost','root','','guesthouse');
 
-$query="INSERT INTO studentrelated VALUES('$name','$email','$phone','$namestudent','$reg','$year','$relation')";
+$query=$pdo->prepare("INSERT INTO studentrelated VALUES('$name','$email','$phone','$namestudent','$reg','$year','$relation')");
 $result=mysqli_query($dbc,$query);
 echo '<div class="success">';
 echo '<div class="row"><div class="col-md-12" style="text-align:center;">';
@@ -102,7 +102,7 @@ echo '<div class="row">
 echo '</div>';
 mysqli_close($dbc);
 
-$to='sanathsingavarapu99@gmail.com';
+$to='uddeshya1812@gmail.com';
 $subject='Guest house Booking';
 $msg='I am '  .$name. ' and I want to book a room.I am' .$relation. 'of' .$namestudent. 'studying' .$year. 'year
       Hope!!This' .$reg. 'Registration number could be useful.I will be available on' .$phone."\n".'Thanking you!!' ;
@@ -115,7 +115,7 @@ else if(!empty($name)&&!empty($email)&&!empty($phone)&&!empty($purpose)&&!empty(
   $group='Other';
   $dbc=mysqli_connect('localhost','root','','guesthouse');
 
-  $query="INSERT INTO other VALUES('$name','$email','$phone','$purpose','$affiliated')";
+  $query=$pdo->prepare("INSERT INTO other VALUES('$name','$email','$phone','$purpose','$affiliated')");
   $result=mysqli_query($dbc,$query);
   echo '<div class="success">';
   echo '<div class="row"><div class="col-md-12" style="text-align:center;">';
@@ -134,7 +134,7 @@ else if(!empty($name)&&!empty($email)&&!empty($phone)&&!empty($purpose)&&!empty(
   echo '</div>';
   mysqli_close($dbc);
 
-  $to='sanathsingavarapu99@gmail.com';
+  $to='uddeshya1812@gmail.com';
   $subject='Guest house Booking';
   $msg='I am ' .$name. ' and I want to book a room and my purpose to visit is'.$purpose.'I am from'.$affiliated.
         'I will be available on'.$phone."\n".'Thanking you!!' ;
@@ -148,7 +148,7 @@ else{
 
 
 $dbc=mysqli_connect('localhost','root','','guesthouse');
-$query="INSERT INTO admindata VALUES('$name','$email','$phone','$group',NOW(),0,0)";
+$query=pdo->prepare("INSERT INTO admindata VALUES('$name','$email','$phone','$group',NOW(),0,0)");
 $result=mysqli_query($dbc,$query);
 mysqli_close($dbc);
 
